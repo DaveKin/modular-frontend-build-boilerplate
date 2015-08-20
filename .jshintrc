@@ -1,0 +1,9 @@
+{
+	"browser": true,
+	"node": true,
+	"curly": true,
+	"eqnull": true,
+	"eqeqeq": true,
+	"undef": true,
+	"laxbreak": true
+}

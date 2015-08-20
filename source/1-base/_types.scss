@@ -1,0 +1,101 @@
+html{
+}
+
+body{
+	font-family: $basefont;
+	color: $color-bodytext;
+	font-size: $basefontsize;
+	line-height: $baseline;
+    margin: 0;   
+	padding: $spacing-unit $spacing-unit*2;
+    word-wrap: break-word;
+    @media(min-width: $medium){
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    @media(min-width: $large){
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $headingfont;
+	color: $color-heading;
+	margin: $spacing-unit 0;
+}
+
+h1{
+    @extend %text-left;
+	font-size: 2*$basefontsize;
+	line-height: 2*$baseline;
+}
+h2{
+	font-size: 1.5*$basefontsize;
+	line-height: 2*$baseline;
+}
+h3{
+	font-size: 1.25*$basefontsize;
+	line-height: 2*$baseline;
+}
+
+a{
+	color: #00f;
+	&:focus {
+    	outline: #88c 1px dashed;
+	}
+	&:visited {
+    	color: #118;
+	}
+	&:active{
+		color: #f00;
+	}
+}
+
+p{
+	margin: $spacing-unit 0;
+}
+ul, ol, dl {
+    margin: $spacing-unit 0;
+    li &{
+    	margin: 0;
+    }
+    dt{
+		font-weight:bold;
+    }
+    dd{
+    	margin-left: $spacing-unit;
+    }
+}
+
+strong,b {
+    font-weight: bold;
+    color: #911;
+}
+em,i {
+    font-style: italic;
+    color: #191;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+figure {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 $spacing-unit 0;
+}
+blockquote {
+    margin: $spacing-unit;
+    font-weight: bold;
+    font-size: $basefontsize * 1.125;
+    color: darken($color-bodytext,25%);
+}
+cite {
+    display: block;
+    text-align: right;
+    margin-top: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+    font-size: $basefontsize;
+    color: lighten($color-bodytext,25%);
+}

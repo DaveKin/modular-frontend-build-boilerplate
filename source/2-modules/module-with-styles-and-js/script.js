@@ -1,0 +1,1 @@
+module.exports = 'component with styles and js';
