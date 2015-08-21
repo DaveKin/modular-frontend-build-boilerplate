@@ -1,0 +1,19 @@
+%expander--expanded{
+  @include expander(none);
+}
+
+%expander--collapsed{
+  @include expander(60px);
+}
+
+%expander__heading--collapsed{
+  @include expander-header(true);
+}
+
+%expander__heading--expanded{
+  @include expander-header(false);
+}
+
+%expander__list{
+  @include expander-list();
+}

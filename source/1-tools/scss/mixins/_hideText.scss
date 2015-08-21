@@ -1,0 +1,6 @@
+@mixin hideText {
+  font-size: 0;
+  height: 1px;
+  overflow: hidden;
+  display: block;
+}

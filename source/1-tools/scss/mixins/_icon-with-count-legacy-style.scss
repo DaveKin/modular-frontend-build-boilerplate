@@ -1,0 +1,62 @@
+%icon-with-count-legacy-style {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  height: 20px;
+
+  &:before {
+    position: absolute;
+    font-size: 18px;
+    line-height: 20px;
+
+  }
+
+  .count {
+    display: block;
+    height: 15px;
+    min-width: 15px;
+    position: absolute;
+    top:5px;
+    right: 0;
+    padding: 0 2px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 13px;
+    color: #666;
+    background-color: #fff;
+    border-radius: 10px;
+
+  }
+
+}
+
+@mixin icon-with-count-legacy-style($icon, $disabled:false) {
+
+  @extend %icon-with-count-legacy-style;
+  $color: $blue;
+
+  @if ($disabled) {
+    $color: #666666;
+  }
+
+  @if ($disabled == false) {
+    &:hover {
+      text-decoration: none;
+
+
+      &:before {
+        color: lighten($blue, 10%);
+      }
+    }
+  }
+
+  &:before {
+    @extend %icon-#{$icon};
+    color: $color;
+  }
+
+  .count {
+    border: 1px solid $color;
+  }
+}

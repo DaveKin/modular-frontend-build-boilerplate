@@ -1,4 +1,6 @@
 module.exports = function(){
 	'use strict';
-	console.log(arguments);
+	if(console){
+		console.log(arguments);
+	}
 };

@@ -1,0 +1,109 @@
+@mixin button--greenWithChevron {
+  position: relative;
+  display: inline-block;
+  background: #42a02d;
+  @include background(linear-gradient(#5fc564, #3f7a05));
+  @include box-shadow(rgb(179, 224, 181) 1px 1px 0px 0px inset);
+  border: solid 1px #4d9d18;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+
+  &:after {
+    @extend %icon-right-arrow;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: inherit;
+  }
+
+  &:hover {
+    &:after {
+      text-decoration: none;
+    }
+  }
+
+  @content;
+}
+
+//%button {
+//  margin: 0;
+//  border-width: 1px;
+//  border-style: solid;
+//  border-radius: 5px;
+//  color: #2a2a2a;
+//  padding: 0 15px;
+//  line-height: 34px;
+//  font-size: 16px;
+//  cursor: pointer;
+//}
+//
+//
+//
+//@mixin button($expand: true) {
+//  @extend %button;
+//
+//  @if ($expand) {
+//    width: 100%;
+//  }
+//
+//  background-color: #f4f4f4;
+//  @include background(linear-gradient(#f4f4f4, #eaeaea));
+//  border-color: #bbb;
+//
+//  &:hover {
+//    @include background(linear-gradient(lighten(#f4f4f4,2%), lighten(#eaeaea,2%)));
+//  }
+//}
+//
+//@mixin button--primary($expand: true) {
+//  @extend %button;
+//
+//  @if ($expand) {
+//    width: 100%;
+//  }
+//
+//  background-color: #00a504;
+//  @include background(linear-gradient(#00a504, #007303));
+//  border-color: #126403;
+//  border-top-color: #007303;
+//  border-bottom-color: #285203;
+//  color: #fff;
+//  text-align: center;
+//  font-weight: bold;
+//
+//  &:hover, &:focus {
+//   @include background(linear-gradient(lighten(#00a504,5%), lighten(#007303,5%)));
+//  }
+//
+//  &:disabled {
+//   @include background(linear-gradient(#d1d1d1, #cbcbcb));
+//   border-color: transparent;
+//  }
+//}
+//
+//%button--text {
+//  border: none;
+//  background: transparent;
+//  color: $blue;
+//  font-size: inherit;
+//  margin: 0;
+//  padding: 0;
+//  cursor: pointer;
+//
+//  &:hover {
+//    background: transparent;
+//    text-decoration: underline;
+//  }
+//
+//  &:focus {
+//    outline: 0;
+//    text-decoration: underline;
+//  }
+//}
+//
+//@mixin button--text {
+//  @extend %button--text;
+//}

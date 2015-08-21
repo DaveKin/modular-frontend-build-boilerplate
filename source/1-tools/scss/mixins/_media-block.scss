@@ -1,0 +1,15 @@
+@mixin media {
+  @include micro-clearfix;
+}
+
+@mixin media__body {
+  @include micro-clearfix;
+}
+
+@mixin media__image {
+  float:left;
+
+  img {
+    display:block;
+  }
+}

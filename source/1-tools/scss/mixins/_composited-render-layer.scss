@@ -1,0 +1,3 @@
+@mixin composited-render-layer {
+  @include transform(translateZ(0));
+}

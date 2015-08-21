@@ -1,0 +1,76 @@
+//HEADERS
+
+%display-1{
+  @include display-1();
+}
+%display-1--thin{
+  @include display-1($copy-dark, 200);
+}
+
+%display-2{
+  @include display-2();
+}
+%display-2--light{
+  @include display-2($copy-light);
+}
+
+%display-3{
+  @include display-3();
+}
+%display-3--dark-medium{
+  @include display-3($copy-dark, 400);
+}
+%display-3--dark-thin {
+  @include display-3($copy-dark, 200);
+}
+
+// BODY TEXT
+
+%body-1{
+  @include body-1();
+}
+%body-1--dark{
+  @include body-1($copy-dark);
+}
+
+%body-2{
+  @include body-2();
+}
+%body-2--blue{
+  @include body-2($blue);
+}
+
+%body-2--blueBold{
+  @include body-2($blue, 700);
+}
+
+%body-2--bold{
+  @include body-2($font-weight: 700);
+}
+
+%body-3{
+  @include body-3();
+}
+
+%body-3--blue{
+  @include body-3($blue);
+}
+
+%body-3--darkBold{
+  @include body-3($copy-dark, 700);
+}
+
+%btn-text{
+  @include btn-text();
+}
+
+%label-small{
+  @include label-small();
+}
+%small-print{
+  @include small-print();
+}
+
+%small-print--bold{
+  @include small-print($copy-light, 700);
+}

@@ -1,0 +1,14 @@
+@mixin star-rating-config($val, $mask) {
+    $starsWidth: $val;
+    $starsHeight: $val*0.27;
+    .star-rating {
+        background-color: $mask;
+        width:$starsWidth+px;
+        height:$starsHeight+px;
+
+        .stars-mask-icon {
+            fill: $mask;
+            height:$starsHeight+px;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+@mixin centered-blockElem($width) { 
+	width: $width;
+	margin: 0 auto;
+}

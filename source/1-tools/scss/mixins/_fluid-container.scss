@@ -1,0 +1,39 @@
+@import 'respond-to';
+%fluid-container {
+  width: 100%;
+  max-width: $site-max-width;
+  min-width: $site-min-width;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  .no-flexbox.no-flexboxlegacy & {
+    width: $site-max-width;
+    @include respond-to('tablet-landscape') {
+      width: 1024px
+    }
+    @include respond-to('tablet-portrait') {
+      width: 768px
+    }
+  }
+
+  .no-mediaqueries & {
+    width: $site-max-width;
+  }
+}
+
+%static-container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+@mixin fluid-container() {
+
+  @if ($isResponsive) {
+    @extend %fluid-container;
+  } @else {
+    @extend %static-container;
+  }
+
+
+}
+

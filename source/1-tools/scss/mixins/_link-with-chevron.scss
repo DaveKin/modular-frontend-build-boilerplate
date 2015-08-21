@@ -1,0 +1,33 @@
+@import "truncate-text";
+
+%linkWithChevron {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  color: $blue;
+  padding-right:21px;
+  @include truncate-text;
+
+  &:after {
+    @extend %icon-right-arrow;
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: inherit;
+    vertical-align: top;
+    position:absolute;
+    right:0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    &:after {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin linkWithChevron() {
+  @extend %linkWithChevron;
+  @content;
+}

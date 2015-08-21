@@ -1,0 +1,14 @@
+@mixin dual-layer-icon($name1, $color1, $name2, $color2) {
+
+  &:before {
+    @extend %icon-#{$name1};
+    position: absolute;
+    color: $color1;
+  }
+
+  &:after {
+    @extend %icon-#{$name2};
+    position: absolute;
+    color: $color2;
+  }
+}

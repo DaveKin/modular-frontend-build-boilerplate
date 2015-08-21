@@ -1,0 +1,9 @@
+@mixin retina-image($image-path, $width: 100%, $position: 0% 0%, $repeat: no-repeat) {
+  $normal-image: '/images/' + $image-path + '.png';
+  $retina-image: '/images/' + $image-path + '2x.png';
+  background: url($normal-image) $position $repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url($retina-image) $position $repeat;
+    background-size: $width auto;
+  }
+}

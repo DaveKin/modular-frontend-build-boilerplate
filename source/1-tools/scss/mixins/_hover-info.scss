@@ -1,0 +1,81 @@
+@mixin hover-info($direction: right, $color: $blue, $width: 190px) {
+
+  display: none;
+  position: absolute;
+  background: #FFF;
+  border: 2px solid $color;
+  @include border-radius(4px);
+  padding: 8px;
+  width: $width;
+  z-index: 1000;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -4px;
+  }
+
+  @if $direction == 'right' {
+    top: -10px;
+    left: 30px;
+    right: auto;
+
+    &:before {
+      top: 10px;
+      left: -11px;
+      right: auto;
+      margin-top: -4px;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-right: 10px solid $color;
+      border-left: none;
+    }
+
+    &:after {
+      top: 10px;
+      left: -8px;
+      right: auto;
+      margin-top: -4px;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-right: 10px solid #FFF;
+      border-left: none;
+    }
+  } @elseif $direction == 'left' {
+    top: -10px;
+    right: 30px;
+    left: auto;
+
+    &:before {
+      top: 10px;
+      right: -11px;
+      left: auto;
+      margin-top: -4px;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-left: 10px solid $color;
+      border-right: none;
+    }
+
+    &:after {
+      top: 10px;
+      right: -8px;
+      left: auto;
+      margin-top: -4px;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-left: 10px solid #FFF;
+      border-right: none;
+    }
+  }
+
+}

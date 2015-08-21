@@ -1,0 +1,7 @@
+%micro-clearfix {
+  overflow:hidden; _overflow:visible; zoom:1;
+}
+
+@mixin micro-clearfix {
+  @extend %micro-clearfix;
+}

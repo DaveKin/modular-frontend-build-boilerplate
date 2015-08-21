@@ -1,5 +1,11 @@
-@import 'typography';
 @import 'colors';
+@import 'typography';
 @import 'mediaqueries';
 
 $spacing-unit: 24px;
+
+$isResponsive: true !default;
+$disableBoxSizing: false !default;
+
+$site-max-width: 1024px;
+$site-min-width: 768px;

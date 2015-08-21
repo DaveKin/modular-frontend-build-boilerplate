@@ -1,0 +1,56 @@
+%fluid-row {
+  @include display-flex;
+
+  //-webkit-box-pack: start;
+  //-moz-box-pack: start;
+  //-webkit-justify-content: flex-start;
+  //-ms-flex-pack: start;
+  //justify-content: flex-start;
+
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+}
+
+@mixin fluid-row() {
+
+  $debug: false;
+//  $debug:true;
+
+  @extend %fluid-row;
+
+  @if ($debug) {
+      & > * {
+      outline: 1px dotted #00F;
+      //margin: 5px;
+    }
+  }
+}
+
+%fluid-col--no-shrink {
+  background-color: transparent;
+   //flex-shrink:0;
+   -webkit-box-flex: 0;
+   -moz-box-flex: 0;
+   -webkit-flex: 0 0 auto;
+   -ms-flex: 0 0 auto;
+   flex: 0 0 auto;
+ }
+
+@mixin fluid-col--no-shrink() {
+  @extend %fluid-col--no-shrink;
+}
+

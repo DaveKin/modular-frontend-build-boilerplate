@@ -1,0 +1,17 @@
+@mixin styled-text-box($display, $centered, $width, $font-size) {
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  width: $width;
+  display: $display;
+  font-size: $font-size;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 29px;
+  vertical-align: bottom;
+  padding-left: 5px;
+  color: #333;
+
+
+  @if $centered == 'centered'{
+    margin: 0 auto;
+  }
+}

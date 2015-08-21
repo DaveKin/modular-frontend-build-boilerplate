@@ -1,0 +1,6 @@
+@mixin icon($name) {
+  &:before {
+    @extend %icon-#{$name};
+    @content;
+  }
+}

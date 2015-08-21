@@ -1,0 +1,77 @@
+// Header Typography
+
+@mixin display-1($color: $copy-dark, $font-weight: 400) {
+  font-size: 40px;
+  line-height: 46px;
+  color: $color;
+  font-weight: $font-weight;
+  letter-spacing: .5px;
+}
+
+@mixin display-2($color: $copy-dark, $font-weight: 200) {
+  font-size: 26px;
+  line-height: 34px;
+  color: $color;
+  font-weight: $font-weight;
+  letter-spacing: 1px;
+}
+
+@mixin display-3($color: $copy-light, $font-weight: 200) {
+  font-size: 20px;
+  line-height: 26px;
+  color: $color;
+  font-weight: $font-weight;
+  letter-spacing: 1px;
+}
+
+// Body Typography
+
+@mixin body-1($color: $copy-light, $font-weight: 400) {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: $font-weight;
+  color: $color;
+  letter-spacing: 0.5px;
+}
+
+@mixin body-2($color: $copy-light, $font-weight: 400) {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: $font-weight;
+  color: $color;
+  letter-spacing: 0.5px;
+}
+
+@mixin body-3($color: $copy-light, $font-weight: 400) {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: $font-weight;
+  color: $color;
+  letter-spacing: 0.7px;
+}
+
+@mixin btn-text($color: $grey-dark, $font-weight: 500) {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: $font-weight;
+  color: $color;
+  letter-spacing: 0.5px;
+}
+
+// Special Typography
+
+@mixin label-small($color: $copy-light) {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $color;
+  letter-spacing: 0.7px;
+}
+
+@mixin small-print($color: $copy-light, $font-weight: 400) {
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: $font-weight;
+  color: $color;
+  letter-spacing: 0.7px;
+}

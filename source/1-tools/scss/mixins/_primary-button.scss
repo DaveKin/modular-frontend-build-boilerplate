@@ -1,0 +1,24 @@
+@mixin primary-button($startColour, $endColour, $width, $height, $centered) {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $startColour), color-stop(100%, $endColour));
+  background: -webkit-linear-gradient($startColour, $endColour);
+  background: -moz-linear-gradient($startColour, $endColour);
+  background: -o-linear-gradient($startColour, $endColour);
+  background: linear-gradient($startColour, $endColour);
+  background-color: $startColour;
+  width: $width;
+  height: $height;
+  color: #fff;
+  border: 0;
+  padding: 3px 5px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 2.4em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #0a5eb1;
+  cursor: pointer;
+
+  @if $centered == 'centered'{
+    display: block;
+    margin: 15px auto;
+  }
+}

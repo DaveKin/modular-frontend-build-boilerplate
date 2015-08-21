@@ -1,0 +1,35 @@
+
+%button-primary--normal{
+  @include button-primary(false);
+}
+%button-primary--small{
+  @include button-primary(true);
+}
+
+%button-secondary--normal{
+  @include button-secondary(false);
+}
+%button-secondary--small{
+  @include button-secondary(true);
+}
+
+%button-search--normal{
+  @include button-search(false);
+}
+%button-search--small{
+  @include button-search(true);
+}
+
+%button-delete-normal{
+  @include button-delete(false);
+}
+%button-delete--small{
+  @include button-delete(true);
+}
+%link-grid-button{
+  @include link-grid-button();
+}
+
+%small-button{
+  @include small-button();
+}

@@ -1,0 +1,41 @@
+%stars-gold{
+  .no-svg & {
+    background-image: url(/images/fpa/icon_star_FFC71F@1x.png);
+    background-repeat: repeat-x;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(/images/fpa/icon_star_FFC71F@2x.png);
+      background-size: 17px auto;
+    }
+  }
+  .svg &{
+    background-image: url(/images/fpa/icon_star_ffc71f.svg);
+  }
+}
+
+%stars-blue{
+  .no-svg & {
+    background-image: url(/images/fpa/icon_star_267ec8@1x.png);
+    background-repeat: repeat-x;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(/images/fpa/icon_star_267ec8@2x.png);
+      background-size: 17px auto;
+    }
+  }
+  .svg &{
+    background-image: url(/images/fpa/icon_star_267ec8.svg);
+  }
+}
+
+%stars-grey{
+  .no-svg & {
+    background-image: url(/images/fpa/icon_star_d2d2d2@1x.png);
+    background-repeat: repeat-x;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(/images/fpa/icon_star_d2d2d2@2x.png);
+      background-size: 17px auto;
+    }
+  }
+  .svg &{
+    background-image: url(/images/fpa/icon_star_d2d2d2.svg);
+  }
+}

@@ -1,0 +1,59 @@
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+
+@mixin ease-in($ease-in) {
+  -moz-transition: all $ease-in ease-in;
+  -webkit-transition: all $ease-in ease-in;
+  -o-transition: all $ease-in ease-in;
+  transition: all $ease-in ease-in;
+}
+@mixin ease-out($ease-out) {
+  -moz-transition: all $ease-out ease-out;
+  -webkit-transition: all $ease-out ease-out;
+  -o-transition: all $ease-out ease-out;
+  transition: all $ease-out ease-out;
+}
+
+
+@mixin ease-in($ease-in) {
+  -moz-transition: all $ease-in ease-in;
+  -webkit-transition: all $ease-in ease-in;
+  -o-transition: all $ease-in ease-in;
+  transition: all $ease-in ease-in;
+}
+@mixin ease-out($ease-out) {
+  -moz-transition: all $ease-out ease-out;
+  -webkit-transition: all $ease-out ease-out;
+  -o-transition: all $ease-out ease-out;
+  transition: all $ease-out ease-out;
+}

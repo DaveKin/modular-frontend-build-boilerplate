@@ -1,0 +1,15 @@
+@mixin styled-select-wrapper($width, $imageOffsetWidth, $margin-left) {
+  border: 1px solid #ccc;
+  width: $width;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 29px;
+  background-position: $imageOffsetWidth 50%;
+  display: inline-block;
+  margin-left: $margin-left;
+  position: relative;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-size: 10px 7px, cover;
+}
+
