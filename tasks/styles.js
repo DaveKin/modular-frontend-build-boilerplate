@@ -9,7 +9,6 @@ var autoprefixer = require('autoprefixer-core');
 var csslint = require('gulp-csslint');
 var minifycss = require('gulp-minify-css');
 var livereload = require('gulp-livereload');
-var rebaser = require("postcss-assets-rebase");
 var debug = require("gulp-debug");
 
 require('./clean');
@@ -20,16 +19,8 @@ gulp.task('css:lint',function(){
   .pipe(csslint.reporter('text'));
 });
 
-
-gulp.task('css:rendermods', function(cb){
-  gulp.src('./'+config.sourceDir+'/4-modules/**/*.scss')
-  .pipe(sass())
-  .pipe(debug({minimal:false}));
-});
-
 /* build the development CSS, readable format with sourcemap for debugging */
 gulp.task('css:dev', ['clean:css'], function(){
-
 
   gulp.src('./'+config.sourceDir+'/'+config.bundleDir+'/**/*.scss')
     .pipe(sourcemaps.init())
@@ -39,7 +30,6 @@ gulp.task('css:dev', ['clean:css'], function(){
     .pipe(sass())
     .pipe(postcss([
       assets(config.assets),
-      //rebaser(config.rebaser),
       autoprefixer(config.autoprefixer)
     ]))
     .pipe(sourcemaps.write())
@@ -56,7 +46,10 @@ gulp.task('css:build', ['clean:css'], function(){
         extensions: ['.scss']
     }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([assets, autoprefixer(config.autoprefixer)]))
+    .pipe(postcss([
+      assets(config.assets),
+      autoprefixer(config.autoprefixer)
+    ]))
     .pipe(minifycss({processImport:false}))
     .pipe(gulp.dest('./'+config.outputDir+'/css'))
     .pipe(csslint(config.csslint))
@@ -67,11 +60,11 @@ gulp.task('css:build', ['clean:css'], function(){
 require('./livereload');
 
 /* watch the scss files and run the dev task */
-gulp.task('css:watch', ['css:dev','livereload:listen'], function () {
+gulp.task('css:watch', ['livereload:listen'], function () {
   gulp.watch('./'+config.sourceDir+'/**/*.scss', ['css:dev']);
 });
 
 /* watch the scss files and run the build task */
-gulp.task('css:watch:build', ['css:build','livereload:listen'], function () {
+gulp.task('css:watch:build', ['livereload:listen'], function () {
   gulp.watch('./'+config.sourceDir+'/**/*.scss', ['css:build']);
 });

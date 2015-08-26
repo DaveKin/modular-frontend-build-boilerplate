@@ -64,6 +64,6 @@ gulp.task('js:build',['clean:js','js:lint'],function(){
 });
 
 
-gulp.task('js:watch', ['js:dev','livereload:listen'], function(){
+gulp.task('js:watch', ['livereload:listen'], function(){
   gulp.watch('./'+config.sourceDir+'/**/*.js',['js:dev']);
 });

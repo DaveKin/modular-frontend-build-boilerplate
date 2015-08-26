@@ -3,7 +3,7 @@ var glob = require('glob');
 var sourceDir = 'source';
 var bundleDir = '5-bundles';
 var outputDir = 'run';
-var sourceDirs = glob.sync('./'+sourceDir+'/**/');
+var sourceDirs = glob.sync('./'+outputDir+'/assets/**/');
 
 module.exports =  {
 	sourceDir: sourceDir,
@@ -12,17 +12,12 @@ module.exports =  {
 	autoprefixer: {
 		browsers: ['last 2 versions', '> 2% in GB', 'ie 8']
 	},
-	rebaser: {
-		assetsPath: './'+outputDir+'/assets',
-		relative: false,
-		renameDuplicates: true
-	},
 	assets: {
 		basePath:'.',
 		baseUrl: '/',
 		cachebuster: false,
 		loadPaths: sourceDirs,
-		relativeTo: false
+		relativeTo: outputDir + '/css'
 	},
 	csslint: {
 	    'important': false,

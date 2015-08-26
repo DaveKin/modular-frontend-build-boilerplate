@@ -130,7 +130,7 @@ the repo contains 2 html files ([test.html](examples/test.html) and [other.html]
 
 #TODO
 
-- Process for importing the assets still isn't working (other than a simple file copy). This ideally needs to resolve relative image urls in each module and remap them to whatever structure the images are moved to in the output directory.
+- Process for importing the assets needs work. This ideally needs to resolve relative image urls in each module and remap them to whatever structure the images are moved to in the output directory.
 - Include html templates in the module and component for import as part of the build
 - Include a testing framework and add tests to modules/components/bundles
 - Add some tracking and reporting to the build process so that changes to the front-end codebase can be tracked, measured and audited.
