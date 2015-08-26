@@ -1,8 +1,15 @@
-(function(w){
+(function(doc){
   'use strict';
-  w.template = require('../1-tools/js/template');
-  w.ajax = require('../1-tools/js/ajax');
-  w.log = require('../1-tools/js/log');
-  w.msj = require('../4-modules/module-with-styles-and-js/script');
-  w.cwj = require('../3-components/component-with-js/script');
-})(window);
+  var log = require('../1-tools/js/log'); //import a small logging tool
+  //import a module
+  var Mod = require('../4-modules/module-with-styles-and-js/script');
+  //instantiate the module
+  var mod = new Mod();
+
+  log('the scripts have loaded');
+  log('using the event channel to cause the module to react');
+  var events = global.eventChannel;
+  events.trigger('module:increment');
+  events.trigger('module:increment');
+  log(events.request('module:ping'));
+})(document);

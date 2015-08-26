@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="37px" viewBox="0 0 24 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>lightning</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="1-Icons" sketch:type="MSArtboardGroup" transform="translate(-478.000000, -965.000000)" fill="#231F1F">
+            <g id="Icons" sketch:type="MSLayerGroup" transform="translate(112.000000, 84.500000)">
+                <path d="M372.264,916.32 C372.084,916.102 372.043,915.781 372.144,915.361 C372.243,914.96 373.844,910.38 376.943,901.621 L367.883,901.621 C367.443,901.621 367.123,901.431 366.924,901.05 C366.723,900.63 366.793,900.231 367.133,899.851 C368.652,898.091 370.748,895.706 373.418,892.696 C376.088,889.686 378.368,887.116 380.258,884.986 C382.148,882.856 383.133,881.741 383.213,881.64 C383.394,881.34 383.643,881.191 383.963,881.191 L384.233,881.191 L384.473,881.43 C384.633,881.63 384.693,881.901 384.653,882.241 C384.613,882.481 383.823,884.756 382.283,889.066 C380.743,893.375 379.963,895.571 379.943,895.651 L388.943,895.651 C389.424,895.611 389.743,895.771 389.903,896.13 C390.084,896.471 390.023,896.831 389.723,897.21 L373.584,916.111 C373.323,916.432 373.062,916.59 372.803,916.59 L372.533,916.56 L372.264,916.32" id="lightning" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

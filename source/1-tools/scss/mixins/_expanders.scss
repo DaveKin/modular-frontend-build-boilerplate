@@ -1,4 +1,4 @@
-.expander-base{
+%expander-base{
   clear: both;
   border-top: 1px solid $grey-light;
   border-bottom: 1px solid $grey-light;
@@ -11,7 +11,7 @@
 }
 
 @mixin expander($max-height: none ){
-  @extend .expander-base;
+  @extend %expander-base;
   max-height:$max-height;
 
   & + &{

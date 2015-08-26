@@ -1,23 +1,23 @@
-.moduleWithImages_png{
+.anotherModuleWithImages_png{
 	display:inline-block;
     background-color: $color-background;
-    background-image: resolve("./img/lightning.png");
+    background-image: resolve("img/lightning.png");
     background-size: $spacing-unit $spacing-unit; 
     width:24px;
     height:34px;
 }
-.moduleWithImages_jpg{
+.anotherModuleWithImages_jpg{
 	display:inline-block;
     background-color: $color-background;
-    background-image: resolve("./img/lightning.jpg");
+    background-image: url("img/lightning.jpg");
     background-size: $spacing-unit $spacing-unit; 
     width:24px;
     height:34px;
 }
-.moduleWithImages_svg{
+.anotherModuleWithImages_svg{
 	display:inline-block;
     background-color: $color-background;
-    background-image: resolve("./img/lightning.svg");
+    background-image: url("img/svg/lightning.svg");
     background-size: $spacing-unit $spacing-unit; 
     width:24px;
     height:34px;

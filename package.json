@@ -42,7 +42,14 @@
     "gulp-util": "^3.0.6",
     "jshint-stylish": "^2.0.1",
     "postcss-assets": "^2.1.2",
+    "postcss-assets-rebase": "^0.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "backbone": "^1.2.2",
+    "backbone.radio": "^1.0.1",
+    "jquery": "^1.11.3",
+    "underscore": "^1.8.3"
   }
 }
