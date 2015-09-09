@@ -1,0 +1,12 @@
+@import '../../../0-settings/colors'
+.component{
+	color: $copy-dark;
+}
+
+.component__icon{
+	$image: 'component-with-everything/img/lightning.svg';
+	background-image: resolve($image);
+	background-size: size($image);
+	width: width($image);
+	height: height($image);
+}
